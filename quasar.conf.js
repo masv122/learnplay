@@ -7,7 +7,7 @@
 // https://quasar.dev/quasar-cli/quasar-conf-js
 /* eslint-env node */
 
-module.exports = function(/* ctx */) {
+module.exports = function ( /* ctx */ ) {
   return {
     // https://quasar.dev/quasar-cli/supporting-ts
     supportTS: false,
@@ -39,7 +39,7 @@ module.exports = function(/* ctx */) {
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
-      vueRouterMode: "hash", // available values: 'hash', 'history'
+      vueRouterMode: "history", // available values: 'hash', 'history'
 
       // transpile: false,
 
@@ -118,8 +118,7 @@ module.exports = function(/* ctx */) {
         orientation: "portrait",
         background_color: "#ffffff",
         theme_color: "#027be3",
-        icons: [
-          {
+        icons: [{
             src: "icons/icon-128x128.png",
             sizes: "128x128",
             type: "image/png",
@@ -182,7 +181,7 @@ module.exports = function(/* ctx */) {
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
       nodeIntegration: true,
 
-      extendWebpack(/* cfg */) {
+      extendWebpack( /* cfg */ ) {
         // do something with Electron main process Webpack cfg
         // chainWebpack also available besides this extendWebpack
       },
