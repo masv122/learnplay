@@ -1,19 +1,44 @@
-
 const routes = [
   {
-    path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    path: "/",
+    component: () => import("layouts/MainLayout.vue"),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
-    ]
+      { path: "", name: "Inicio", component: () => import("pages/Inicio.vue") },
+    ],
   },
-
-  // Always leave this as last one,
-  // but you can also remove it
   {
-    path: '*',
-    component: () => import('pages/Error404.vue')
-  }
-]
+    path: "/play",
+    component: () => import("layouts/PlayLayout.vue"),
+    children: [
+      { path: "", name: "Play", component: () => import("pages/Play.vue") },
+    ],
+  },
+  {
+    path: "/perfiles",
+    component: () => import("layouts/PerfilesLayout.vue"),
+    children: [
+      {
+        path: "",
+        name: "Perfiles",
+        component: () => import("pages/Perfiles.vue"),
+      },
+    ],
+  },
+  {
+    path: "/crear-perfil",
+    component: () => import("layouts/CrearPerfilLayout.vue"),
+    children: [
+      {
+        path: "",
+        name: "CrearPerfil",
+        component: () => import("pages/CrearPerfil.vue"),
+      },
+    ],
+  },
+  {
+    path: "*",
+    component: () => import("pages/Error404.vue"),
+  },
+];
 
-export default routes
+export default routes;

@@ -1,0 +1,602 @@
+[
+    {
+        "a": "15 minutos",
+        "b": "30 minutos",
+        "c": "60 minutos",
+        "d": "120 minutos",
+        "dificultad": 0,
+        "id": 1,
+        "pregunta": "¿Cuántos minutos tiene una hora?",
+        "respuesta": "60 minutos"
+    },
+    {
+        "a": "Monagas",
+        "b": "Miranda",
+        "c": "Zulia",
+        "d": "Caracas",
+        "dificultad": 0,
+        "id": 2,
+        "pregunta": "¿Cuál es la capital de Venezuela?",
+        "respuesta": "Caracas"
+    },
+    {
+        "a": "4",
+        "b": "10",
+        "c": "6",
+        "d": "8",
+        "dificultad": 0,
+        "id": 3,
+        "pregunta": "¿Cuántas patas tiene una araña?",
+        "respuesta": "8"
+    },
+    {
+        "a": "Español",
+        "b": "Portugués",
+        "c": "Inglés",
+        "d": "Brasileño",
+        "dificultad": 0,
+        "id": 4,
+        "pregunta": "Idioma hablado en Brasil",
+        "respuesta": "Portugués"
+    },
+    {
+        "a": "Proverbio",
+        "b": "Adjetivo",
+        "c": "Adverbio",
+        "d": "Pronombre",
+        "dificultad": 0,
+        "id": 5,
+        "pregunta": "¿Qué tipo de palabra es “aquí”?",
+        "respuesta": "Adverbio"
+    },
+    {
+        "a": "Groenlandia",
+        "b": "Asia",
+        "c": "América",
+        "d": "Europa",
+        "dificultad": 0,
+        "id": 6,
+        "pregunta": "¿Cuál de estos no es un continente?",
+        "respuesta": "Groenlandia"
+    },
+    {
+        "a": "India",
+        "b": "China",
+        "c": "Rusia",
+        "d": "Australia",
+        "dificultad": 0,
+        "id": 7,
+        "pregunta": "¿Cuál es el país con mayor población del mundo?",
+        "respuesta": "China"
+    },
+    {
+        "a": "Palabra",
+        "b": "Pelota",
+        "c": "Estrella",
+        "d": "Señal",
+        "dificultad": 0,
+        "id": 8,
+        "pregunta": "Completa la frase: “el sol es la  ______ más grande”",
+        "respuesta": "Estrella"
+    },
+    {
+        "a": "4 sílabas",
+        "b": "6 sílabas",
+        "c": "7 sílabas",
+        "d": "5 sílabas",
+        "dificultad": 0,
+        "id": 9,
+        "pregunta": "¿Cuántas sílabas tiene la palabra abecedario?",
+        "respuesta": "5 sílabas"
+    },
+    {
+        "a": "-a",
+        "b": "-ma",
+        "c": "-ne",
+        "d": "-cer",
+        "dificultad": 0,
+        "id": 10,
+        "pregunta": "¿Sílaba tónica de la palabra amanecer?",
+        "respuesta": "-cer"
+    },
+    {
+        "a": "Marte",
+        "b": "Júpiter",
+        "c": "Saturno",
+        "d": "Urano",
+        "dificultad": 0,
+        "id": 11,
+        "pregunta": "¿5to planeta del sistema solar?",
+        "respuesta": "Júpiter"
+    },
+    {
+        "a": "Roma",
+        "b": "El Vaticano",
+        "c": "Viena",
+        "d": "Venecia",
+        "dificultad": 0,
+        "id": 12,
+        "pregunta": "¿Cuál es la capital de Italia?",
+        "respuesta": "Roma"
+    },
+    {
+        "a": "Una película",
+        "b": "Una canción",
+        "c": "Una flor",
+        "d": "Un premio",
+        "dificultad": 0,
+        "id": 13,
+        "pregunta": "¿Qué es una orquídea?",
+        "respuesta": "Una flor"
+    },
+    {
+        "a": "365",
+        "b": "364",
+        "c": "367",
+        "d": "366",
+        "dificultad": 0,
+        "id": 14,
+        "pregunta": "¿Cuántos días tiene un año bisiesto?",
+        "respuesta": "366"
+    },
+    {
+        "a": "El León",
+        "b": "El Oso",
+        "c": "El Tigre",
+        "d": "El Mono",
+        "dificultad": 0,
+        "id": 15,
+        "pregunta": "¿Quién se dice que es el rey de la selva?",
+        "respuesta": "El León"
+    },
+    {
+        "a": "Norte",
+        "b": "Sur",
+        "c": "Este",
+        "d": "Oeste",
+        "dificultad": 0,
+        "id": 16,
+        "pregunta": "¿Por dónde sale el sol?",
+        "respuesta": "Este"
+    },
+    {
+        "a": "Por 4",
+        "b": "Por  3",
+        "c": "Por 7",
+        "d": "Por 6",
+        "dificultad": 0,
+        "id": 17,
+        "pregunta": "¿Por cuánto hay que multiplicar 6 para tener 36?",
+        "respuesta": "Por 6"
+    },
+    {
+        "a": "24",
+        "b": "12",
+        "c": "23",
+        "d": "21",
+        "dificultad": 0,
+        "id": 18,
+        "pregunta": "¿Cuántas unidades hay en dos docenas?",
+        "respuesta": "24"
+    },
+    {
+        "a": "3 lados",
+        "b": "5 lados",
+        "c": "9 lados",
+        "d": "4 lados",
+        "dificultad": 0,
+        "id": 19,
+        "pregunta": "¿Cuántos lados tiene un pentágono?",
+        "respuesta": "5 lados"
+    },
+    {
+        "a": "a",
+        "b": "e",
+        "c": "o",
+        "d": "Todas son vocales",
+        "dificultad": 0,
+        "id": 20,
+        "pregunta": "¿Cuál no es una vocal?",
+        "respuesta": "Todas son vocales"
+    },
+    {
+        "a": "Nilo",
+        "b": "Amazonas",
+        "c": "Misisipi",
+        "d": "Orinoco",
+        "dificultad": 1,
+        "id": 21,
+        "pregunta": "¿Cuál es el río más caudaloso del mundo?",
+        "respuesta": "Amazonas"
+    },
+    {
+        "a": "Faraona de Egipto",
+        "b": "Ganadora de un premio nobel",
+        "c": "Cantante",
+        "d": "Inventora",
+        "dificultad": 1,
+        "id": 22,
+        "pregunta": "¿Quién fue Cleopatra?",
+        "respuesta": "Faraona de Egipto"
+    },
+    {
+        "a": "10 años",
+        "b": "5 años",
+        "c": "4 años",
+        "d": "100 años",
+        "dificultad": 1,
+        "id": 23,
+        "pregunta": "¿Cada cuántos años tenemos un año bisiesto?",
+        "respuesta": "4 años"
+    },
+    {
+        "a": "Venus",
+        "b": "Júpiter",
+        "c": "La Luna",
+        "d": "Mercurio",
+        "dificultad": 1,
+        "id": 24,
+        "pregunta": "¿Qué planeta es el más cercano al Sol?",
+        "respuesta": "Mercurio"
+    },
+    {
+        "a": "Pico Bolívar",
+        "b": "Sierra",
+        "c": "Everest",
+        "d": "El Ávila",
+        "dificultad": 1,
+        "id": 25,
+        "pregunta": "¿Cuál es la montaña más alta en la actualidad?",
+        "respuesta": "Everest"
+    },
+    {
+        "a": "2019",
+        "b": "2109",
+        "c": "1919",
+        "d": "2009",
+        "dificultad": 1,
+        "id": 26,
+        "pregunta": "¿El número romano MMXIX significa?",
+        "respuesta": "2019"
+    },
+    {
+        "a": "100° grados",
+        "b": "0° grados",
+        "c": "-12° grados",
+        "d": "2500° grados",
+        "dificultad": 1,
+        "id": 27,
+        "pregunta": "¿A qué temperatura se congela el agua?",
+        "respuesta": "0° grados"
+    },
+    {
+        "a": "Forma distinta, Igual significado",
+        "b": "Forma distinta, Distinto significado",
+        "c": "Igual forma, Distinto significado",
+        "d": "Igual forma, Igual significado",
+        "dificultad": 1,
+        "id": 28,
+        "pregunta": "¿Qué significa que dos palabras sean sinónimos?",
+        "respuesta": "Forma distinta, Igual significado"
+    },
+    {
+        "a": "Cuerdas",
+        "b": "Aire",
+        "c": "Percusión",
+        "d": "Ninguno",
+        "dificultad": 1,
+        "id": 29,
+        "pregunta": "¿Qué tipo de instrumento es un piano?",
+        "respuesta": "Percusión"
+    },
+    {
+        "a": "La Niña y la Pinta",
+        "b": "La niña, la Pinta y la Santa María",
+        "c": "El Holandés Errante y el Perla Negra",
+        "d": "Todos los anteriores",
+        "dificultad": 1,
+        "id": 30,
+        "pregunta": "Cristóbal Colón vino con los barcos…",
+        "respuesta": "La Niña, la Pinta y la Santa María"
+    },
+    {
+        "a": "Esdrújula",
+        "b": "Cómputo",
+        "c": "Lápiz",
+        "d": "Parámetro",
+        "dificultad": 1,
+        "id": 31,
+        "pregunta": "¿Cuál palabra NO es esdrújula?",
+        "respuesta": "Lápiz"
+    },
+    {
+        "a": "10000",
+        "b": "0.001",
+        "c": "1000",
+        "d": "100",
+        "dificultad": 1,
+        "id": 32,
+        "pregunta": "¿Cuántos kilos son una tonelada?",
+        "respuesta": "1000"
+    },
+    {
+        "a": "Roma",
+        "b": "París",
+        "c": "Caracas",
+        "d": "Maracay",
+        "dificultad": 1,
+        "id": 33,
+        "pregunta": "¿En qué ciudad se encuentra el museo del Louvre?",
+        "respuesta": "París"
+    },
+    {
+        "a": "Que ciento volando",
+        "b": "Que riendo",
+        "c": "Que en jaula",
+        "d": "Que ninguno suelto",
+        "dificultad": 1,
+        "id": 34,
+        "pregunta": "Termina el refrán: Más vale pájaro en mano…",
+        "respuesta": "Que ciento volando"
+    },
+    {
+        "a": "Cantante",
+        "b": "Pintor",
+        "c": "Astronauta",
+        "d": "Minero",
+        "dificultad": 1,
+        "id": 35,
+        "pregunta": "Pablo Picasso era…",
+        "respuesta": "Pintor"
+    },
+    {
+        "a": "7 sentidos",
+        "b": "8 sentidos",
+        "c": "5 sentidos",
+        "d": "6 sentidos",
+        "dificultad": 1,
+        "id": 36,
+        "pregunta": "¿Cuántos sentidos tenemos los seres humanos?",
+        "respuesta": "5 sentidos"
+    },
+    {
+        "a": "Descubrir América",
+        "b": "Pisar la luna",
+        "c": "Caminar sobre el agua",
+        "d": "Descubrir la electricidad",
+        "dificultad": 1,
+        "id": 37,
+        "pregunta": "¿Por qué se hizo famoso Cristóbal Colón?",
+        "respuesta": "Descubrir América"
+    },
+    {
+        "a": "Blue",
+        "b": "Red",
+        "c": "Yellow",
+        "d": "Black",
+        "dificultad": 1,
+        "id": 38,
+        "pregunta": "¿Cómo se dice en inglés “amarillo”?",
+        "respuesta": "Yellow"
+    },
+    {
+        "a": "Brillante",
+        "b": "Oscuro",
+        "c": "Opaco",
+        "d": "Ninguno",
+        "dificultad": 1,
+        "id": 39,
+        "pregunta": "¿Cuál es el antónimo de “Claro”?",
+        "respuesta": "Oscuro"
+    },
+    {
+        "a": "Urales",
+        "b": "Los Andes",
+        "c": "El Himalaya",
+        "d": "Todos",
+        "dificultad": 1,
+        "id": 40,
+        "pregunta": "¿Qué cordillera montañosa separa Europa de Asia?",
+        "respuesta": "Urales"
+    },
+    {
+        "a": "Tibia y Peroné",
+        "b": "Cúbito y Radio",
+        "c": "Húmero y Fémur",
+        "d": "Martillo, Yunque y Estribo",
+        "dificultad": 2,
+        "id": 41,
+        "pregunta": "¿Qué huesos encontramos en el antebrazo?",
+        "respuesta": "Cúbito y Radio"
+    },
+    {
+        "a": "Don Quijote de la Mancha",
+        "b": "Atila el Huno",
+        "c": "Dave el Bárbaro",
+        "d": "Cristobal Colón",
+        "dificultad": 2,
+        "id": 42,
+        "pregunta": "¿Personaje más conocido de Miguel de Cervantes?",
+        "respuesta": "Don Quijote de la Mancha"
+    },
+    {
+        "a": "1",
+        "b": "12",
+        "c": "2",
+        "d": "Ninguno",
+        "dificultad": 2,
+        "id": 43,
+        "pregunta": "¿Cuántos meses tienen 28 días?",
+        "respuesta": "12"
+    },
+    {
+        "a": "Unidad de tiempo",
+        "b": "Una herramienta",
+        "c": "Un animal",
+        "d": "Ninguno",
+        "dificultad": 2,
+        "id": 44,
+        "pregunta": "¿Qué es un siglo?",
+        "respuesta": "Unidad de tiempo"
+    },
+    {
+        "a": "Barcelona",
+        "b": "Caracas",
+        "c": "París",
+        "d": "Los Teques",
+        "dificultad": 2,
+        "id": 45,
+        "pregunta": "¿En qué ciudad se encuentra la Torre Eiffel?",
+        "respuesta": "París"
+    },
+    {
+        "a": "2 lados iguales",
+        "b": "Todos iguales",
+        "c": "3 lados iguales",
+        "d": "Ningún lado igual",
+        "dificultad": 2,
+        "id": 46,
+        "pregunta": "Un triángulo Isósceles tiene…",
+        "respuesta": "2 lados iguales"
+    },
+    {
+        "a": "Gas, metal y aire",
+        "b": "Agua, hierro y tierra",
+        "c": "Sólido, líquido y gas",
+        "d": "Fuego, rayo y viento",
+        "dificultad": 2,
+        "id": 47,
+        "pregunta": "¿Estados básicos de la materia?",
+        "respuesta": "Sólido, Líquido y Gas"
+    },
+    {
+        "a": "2 tiempos",
+        "b": "3 tiempos",
+        "c": "No existe",
+        "d": "1 tiempo",
+        "dificultad": 2,
+        "id": 48,
+        "pregunta": "En música, ¿A cuántos tiempos equivale una blanca?",
+        "respuesta": "2 tiempos"
+    },
+    {
+        "a": "360°",
+        "b": "270°",
+        "c": "180°",
+        "d": "Ninguno",
+        "dificultad": 2,
+        "id": 49,
+        "pregunta": "¿Cuánto suman los ángulos de un triángulo?",
+        "respuesta": "180°"
+    },
+    {
+        "a": "20",
+        "b": "12",
+        "c": "12.5",
+        "d": "5",
+        "dificultad": 2,
+        "id": 50,
+        "pregunta": "¿Cuánto es el 25% de 25?",
+        "respuesta": "5"
+    },
+    {
+        "a": "Número que contenga el 1",
+        "b": "Número divisible entre 2",
+        "c": "Número divisible entre sí mismo y 1",
+        "d": "Todas las anteriores",
+        "dificultad": 2,
+        "id": 51,
+        "pregunta": "¿Qué es un número primo?",
+        "respuesta": "Número divisible entre sí mismo y 1"
+    },
+    {
+        "a": "Leonardo Di Caprio",
+        "b": "Di Estefano",
+        "c": "Leonardo Da Vinci",
+        "d": "Miguel Ángel",
+        "dificultad": 2,
+        "id": 52,
+        "pregunta": "¿Quién pintó la Mona Lisa?",
+        "respuesta": "Leonardo Da Vinci"
+    },
+    {
+        "a": "La música",
+        "b": "El teatro",
+        "c": "La pintura",
+        "d": "La ciencia",
+        "dificultad": 2,
+        "id": 53,
+        "pregunta": "Mozart era un genio del mundo de…",
+        "respuesta": "La música"
+    },
+    {
+        "a": "No pueden escribir",
+        "b": "Sensoria",
+        "c": "Puntero",
+        "d": "Braille",
+        "dificultad": 2,
+        "id": 54,
+        "pregunta": "¿Cómo se llama la escritura utilizada por personas ciegas?",
+        "respuesta": "Braille"
+    },
+    {
+        "a": "Índico",
+        "b": "Pacífico",
+        "c": "Atlántico",
+        "d": "Antártico",
+        "dificultad": 2,
+        "id": 55,
+        "pregunta": "¿Qué océano es el más grande?",
+        "respuesta": "Pacífico"
+    },
+    {
+        "a": "Solo 2 lados",
+        "b": "Ninguno",
+        "c": "3 lados",
+        "d": "4 lados",
+        "dificultad": 2,
+        "id": 56,
+        "pregunta": "¿Un triángulo equilátero tiene cuántos lados iguales?",
+        "respuesta": "3 lados"
+    },
+    {
+        "a": "China",
+        "b": "Europa",
+        "c": "África",
+        "d": "Asia",
+        "dificultad": 2,
+        "id": 57,
+        "pregunta": "¿Qué continente es el más poblado?",
+        "respuesta": "Asia"
+    },
+    {
+        "a": "Adjetivo",
+        "b": "Nombre",
+        "c": "Verbo",
+        "d": "Artículo",
+        "dificultad": 2,
+        "id": 58,
+        "pregunta": "¿La palabra “bonito” es un…?",
+        "respuesta": "Adjetivo"
+    },
+    {
+        "a": "Traslación",
+        "b": "Rotación",
+        "c": "No se mueve",
+        "d": "Todos los anteriores",
+        "dificultad": 2,
+        "id": 59,
+        "pregunta": "Movimiento de la tierra sobre su eje",
+        "respuesta": "Rotación"
+    },
+    {
+        "a": "Neil Armstrong",
+        "b": "Van Goh",
+        "c": "Bill Gates",
+        "d": "Bill Murray",
+        "dificultad": 2,
+        "id": 60,
+        "pregunta": "¿Quién pisó la luna por primera vez?",
+        "respuesta": "Neil Armstrong"
+    }
+]
