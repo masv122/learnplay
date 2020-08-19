@@ -1,7 +1,9 @@
-import { LocalStorage, SessionStorage } from "quasar";
+import { LocalStorage } from "quasar";
 
 export default ({ store }) => {
 	let perfilLocal = LocalStorage.getItem("perfil");
-	let perfil = store.getters["perfiles/buscarPerfil"](perfilLocal.id);
-	if (!!perfil) store.commit("perfiles/updatePerfil", perfil);
+	if (!!perfil) {
+		store.commit("perfiles/updatePerfil", perfil);
+		let perfil = store.getters["perfiles/buscarPerfil"](perfilLocal.id);
+	}
 };
