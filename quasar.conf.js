@@ -144,6 +144,17 @@ module.exports = function(/* ctx */) {
           },
         ],
       },
+      metaVariables: {
+        appleMobileWebAppCapable: "yes",
+        appleMobileWebAppStatusBarStyle: "default",
+        appleTouchIcon120: "icons/apple-icon-120x120.png",
+        appleTouchIcon180: "icons/apple-icon-180x180.png",
+        appleTouchIcon152: "icons/apple-icon-152x152.png",
+        appleTouchIcon167: "icons/apple-icon-167x167.png",
+        appleSafariPinnedTab: "icons/safari-pinned-tab.svg",
+        msapplicationTileImage: "icons/ms-icon-144x144.png",
+        msapplicationTileColor: "#000000",
+      },
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/developing-cordova-apps/configuring-cordova
