@@ -20,6 +20,17 @@ export async function eliminarPerfil({ commit, getters }, id) {
 export async function cargarPerfiles({ commit }) {
 	try {
 		const resultado = await db.local.rel.find("perfil");
+		for (var i = 0; i < resultado.perfiles.length; i++) {
+			if (resultado.perfiles[i].foto) {
+				resultado.perfiles[i].img = URL.createObjectURL(
+					await db.local.rel.getAttachment(
+						"perfil",
+						resultado.perfiles[i].id,
+						"file"
+					)
+				);
+			}
+		}
 		if (!!resultado) {
 			commit("cargarPerfiles", resultado.perfiles);
 		}
