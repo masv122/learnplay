@@ -22,6 +22,7 @@
 					@click="updateStep(3)"
 					color="primary"
 					label="Siguiente"
+					:disabled="!nombre || !apellido || !fecha"
 				/>
 				<q-btn
 					flat
@@ -113,15 +114,43 @@
 			async guardarPerfil() {
 				const perfil = {
 					genero: this.genero,
+					foto: !!this.foto,
 					nombre: this.nombre,
 					apellido: this.apellido,
 					fecha: this.fecha,
-					foto: "assets/Logo.png",
 					nivel: 0,
 					exp: 0,
+					tiempo: 0,
+					logros: [],
+					estadisticas: {
+						basico: {
+							tiempo: 0,
+							correctas: 0,
+							incorrectas: 0,
+							pasadas: 0,
+							poderes: 0,
+							logros: [],
+						},
+						intermedio: {
+							tiempo: 0,
+							correctas: 0,
+							incorrectas: 0,
+							pasadas: 0,
+							poderes: 0,
+							logros: [],
+						},
+						avanzado: {
+							tiempo: 0,
+							correctas: 0,
+							incorrectas: 0,
+							pasadas: 0,
+							poderes: 0,
+							logros: [],
+						},
+					},
 				};
 				try {
-					const resultado = await this.$db.local.rel.save(
+					let resultado = await this.$db.local.rel.save(
 						"perfil",
 						perfil
 					);
@@ -132,7 +161,18 @@
 							: "No se pudo crear el perfil",
 						timeout: 500,
 					});
-					if (!!resultado) this.$router.push({ name: "Perfiles" });
+					if (!!resultado && !!perfil.foto) {
+						const attachment = this.foto;
+						const fotoResultado = await this.$db.local.rel.putAttachment(
+							"perfil",
+							{ id: resultado.id, rev: resultado.rev },
+							"file",
+							attachment,
+							attachment.type
+						);
+						if (!!fotoResultado)
+							this.$router.push({ name: "Perfiles" });
+					} else this.$router.push({ name: "Perfiles" });
 				} catch (e) {
 					alert("ha ocurrido un error al crear el perfil: " + e);
 				}

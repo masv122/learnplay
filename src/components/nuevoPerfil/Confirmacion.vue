@@ -6,6 +6,14 @@
 				spinner-color="primary"
 				spinner-size="82px"
 				width="200px"
+				v-if="!foto"
+			/>
+			<q-img
+				v-else
+				:src="fotoEncoded"
+				spinner-color="primary"
+				spinner-size="82px"
+				width="200px"
 			/>
 		</div>
 		<div class="text-subtitle1">
@@ -44,6 +52,9 @@
 				"fecha",
 				"foto",
 			]),
+			fotoEncoded() {
+				return URL.createObjectURL(this.foto);
+			},
 		},
 	};
 </script>

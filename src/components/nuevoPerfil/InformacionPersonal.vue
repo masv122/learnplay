@@ -1,8 +1,26 @@
 <template>
 	<q-form @submit.prevent class="q-gutter-md">
-		<q-input filled v-model="_nombre" label="Nombre *" lazy-rules />
-		<q-input filled v-model="_apellido" label="Apellido *" lazy-rules />
-		<q-input filled v-model="_fecha" mask="date" :rules="['date']">
+		<q-input
+			filled
+			v-model="_nombre"
+			label="Nombre"
+			lazy-rules
+			:rules="[(val) => !!val || 'Escriba un Nombre']"
+		/>
+		<q-input
+			filled
+			v-model="_apellido"
+			label="Apellido"
+			lazy-rules
+			:rules="[(val) => !!val || 'Escribar su apellido']"
+		/>
+		<q-input
+			filled
+			v-model="_fecha"
+			mask="date"
+			label="Fecha de nacimiento"
+			:rules="['date', (val) => !!val || 'Ingrese una fecha']"
+		>
 			<template v-slot:append>
 				<q-icon name="event" class="cursor-pointer">
 					<q-popup-proxy

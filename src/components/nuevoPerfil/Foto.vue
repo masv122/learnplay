@@ -1,7 +1,15 @@
 <template>
-	<div class="flex flex-center bg-white">
+	<div class="flex flex-center bg-white q-gutter-md">
 		<q-img
 			src="~assets/Logo.png"
+			spinner-color="primary"
+			spinner-size="82px"
+			width="200px"
+			v-if="!foto"
+		/>
+		<q-img
+			v-else
+			:src="fotoEncoded"
 			spinner-color="primary"
 			spinner-size="82px"
 			width="200px"
@@ -22,15 +30,11 @@
 
 <script>
 	import { mapMutations, mapState } from "vuex";
+	import fotoDefault from "assets/Logo.png";
 	export default {
 		name: "Foto",
 		data() {
 			return {};
-		},
-		watch: {
-			foto: (val) => {
-				console.log(val);
-			},
 		},
 		computed: {
 			...mapState("perfiles", ["foto"]),
@@ -41,6 +45,11 @@
 				set(value) {
 					this.updateFoto(value);
 				},
+			},
+			fotoEncoded() {
+				return URL.createObjectURL(
+					!!this.foto ? this.foto : fotoDefault
+				);
 			},
 		},
 		methods: {
