@@ -28,7 +28,7 @@
 				</q-chip>
 			</q-toolbar>
 			<q-toolbar class="col-3 text-center">
-				<q-toolbar-title>00:00</q-toolbar-title>
+				<q-toolbar-title>{{ cronometro }}</q-toolbar-title>
 			</q-toolbar>
 			<q-toolbar class="col-3 text-center">
 				<q-btn-dropdown
@@ -91,10 +91,14 @@
 		name: "SupHeader",
 		components: {},
 		data() {
-			return {};
+			return {
+				segundos: 57,
+				minutos: 0,
+			};
 		},
 		computed: {
-			...mapState("global", ["correctas", "incorrectas", "pasadas"]),
+			...mapState("puntaje", ["correctas", "incorrectas", "pasadas"]),
+			...mapGetters("cronometro", ["cronometro"]),
 		},
 		methods: {},
 	};
