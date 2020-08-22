@@ -10,25 +10,33 @@
 			:to="{ name: 'Inicio' }"
 		>
 			<q-item-section avatar>
+				<q-avatar v-if="perfil.foto">
+					<img :src="perfil.img" />
+				</q-avatar>
 				<q-avatar
+					v-else
 					size="xl"
 					color="primary"
 					text-color="white"
 					icon="perm_identity"
 				>
-					<q-badge floating color="teal">{{ perfil.nivel }}</q-badge>
+					<q-badge floating color="green">{{ perfil.nivel }}</q-badge>
 				</q-avatar>
 			</q-item-section>
 
 			<q-item-section>
 				<q-item-label>{{ perfil.nombre }}</q-item-label>
-				<q-item-label caption lines="1">Tiempo jugado: </q-item-label>
-				<q-item-label caption lines="1">Logros: </q-item-label>
+				<q-item-label caption lines="1"
+					>Tiempo jugado: {{ perfil.tiempo }}</q-item-label
+				>
+				<q-item-label caption lines="1"
+					>Logros: {{ perfil.logros.length }}</q-item-label
+				>
 				<q-separator spaced />
 			</q-item-section>
 
 			<q-item-section side>
-				<q-icon name="gamepad" color="teal" />
+				<q-icon name="play_arrow" color="teal" />
 			</q-item-section>
 		</q-item>
 
