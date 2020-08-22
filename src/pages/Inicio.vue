@@ -22,3 +22,9 @@
 		},
 	};
 </script>
+
+<style>
+	.my-card {
+		border-radius: 30px;
+	}
+</style>
