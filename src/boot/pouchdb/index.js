@@ -27,7 +27,7 @@ const db = new Database();
 export default async ({ Vue, store }) => {
   await db.configure({
     onchange(change) {
-      let { data, _id, _rev, _deleted } = change.doc;
+      let { data, _id, _rev, _deleted, _attachments } = change.doc;
       let parsed = db.local.rel.parseDocID(_id);
       let event = events[parsed.type];
       if (_deleted) {
@@ -37,6 +37,7 @@ export default async ({ Vue, store }) => {
       } else {
         data.id = parsed.id;
         data.rev = _rev;
+        if (!!_attachments) data.attachments = _attachments;
         if (event) {
           store.dispatch(event.guardar, data);
         }
