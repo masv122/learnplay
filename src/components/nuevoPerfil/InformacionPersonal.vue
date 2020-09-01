@@ -81,7 +81,6 @@
 				"updateFecha",
 				"updateStep",
 			]),
-			methodName() {},
 		},
 	};
 </script>

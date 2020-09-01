@@ -7,7 +7,7 @@
 				fab
 				icon="play_arrow"
 				color="primary"
-				label="Iniciar"
+				label=" Iniciar"
 			/>
 		</q-page-sticky>
 	</q-page>

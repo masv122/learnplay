@@ -35,6 +35,7 @@
 </template>
 
 <script>
+	import { mapState, mapMutations } from "vuex";
 	import playScripts from "src/mixins/playScripts";
 	export default {
 		name: "RetoBandera",
@@ -62,9 +63,24 @@
 		},
 		mixins: [playScripts],
 		data() {
-			return {
-				respuesta: "",
-			};
+			return {};
+		},
+		computed: {
+			...mapState("play", ["respuestaBandera"]),
+			respuesta: {
+				get() {
+					return this.respuestaBandera;
+				},
+				set(value) {
+					this.updateRespuestaBanderta(value);
+				},
+			},
+		},
+		methods: {
+			...mapMutations("play", ["updateRespuestaBanderta"]),
+		},
+		created() {
+			this.updateRespuestaBanderta("");
 		},
 	};
 </script>

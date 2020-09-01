@@ -38,7 +38,7 @@
 </template>
 
 <script>
-	import { mapMutations, mapState } from "vuex";
+	import { mapState } from "vuex";
 	export default {
 		name: "Confirmacion",
 		data() {

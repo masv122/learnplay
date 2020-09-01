@@ -1,12 +1,5 @@
 <template>
 	<q-page padding>
-		<!-- 		<q-btn
-			label="up"
-			@click="
-				pararCronometro();
-				updateResumenFinal();
-			"
-		/> -->
 		<reto-bandera
 			v-if="tipoPrueba == 0"
 			:dificultad="pruebaGenerada.dificultad"
@@ -36,7 +29,6 @@
 	import ResumenFinal from "components/ResumenFinal.vue";
 	import RetoOpcionMultiple from "components/RetoOpcionMultiple.vue";
 	import RetoBooleano from "components/RetoBooleano.vue";
-	import { mapState, mapGetters, mapMutations } from "vuex";
 	export default {
 		name: "Play",
 		components: {
@@ -50,11 +42,10 @@
 			return {};
 		},
 		created() {
-			this.generarPrueba();
-			this.iniciarCronometro();
+			this.play();
 		},
 		beforeDestroy() {
-			this.reiniciarCronometro();
+			this.endPlay();
 		},
 	};
 </script>
