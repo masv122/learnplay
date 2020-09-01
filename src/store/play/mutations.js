@@ -25,6 +25,9 @@ export function updatePruebaGenerada(state, value) {
 export function updateOpciones(state, value) {
 	state.opciones = value;
 }
-export function updateResumenFinal(state) {
-	state.resumenFinal = !state.resumenFinal;
+export function updateResumenFinal(state, value) {
+	state.resumenFinal = value;
+}
+export function updateRespuestaBanderta(state, value) {
+	state.respuestaBandera = value;
 }
