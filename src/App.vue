@@ -4,7 +4,6 @@
 	</div>
 </template>
 <script>
-	import { mapState, mapMutations, mapGetters } from "vuex";
 	import perfilEngine from "src/mixins/perfilEngine";
 	export default {
 		name: "App",
