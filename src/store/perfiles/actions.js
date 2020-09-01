@@ -1,13 +1,14 @@
 import { db } from "boot/pouchdb/index";
+import Perfil from "src/class/perfil";
 
-export async function guardarPerfil({ commit, getters }, perfil) {
+export async function guardarPerfil({ commit, getters, state }, perfil) {
+	if (!!state.perfil && perfil.id === state.perfil.id)
+		commit("modificarPerfil", perfil);
 	const indice = getters.buscarIndice(perfil.id);
 	if (indice >= 0) {
 		const resultado = { indice, perfil };
-		commit("modificarPerfil", resultado);
-	} else {
-		commit("insertarPerfil", perfil);
-	}
+		commit("modificarPerfiles", resultado);
+	} else commit("insertarPerfil", perfil);
 }
 export async function eliminarPerfil({ commit, getters }, id) {
 	const indice = getters.buscarIndice(id);
@@ -20,19 +21,31 @@ export async function eliminarPerfil({ commit, getters }, id) {
 export async function cargarPerfiles({ commit }) {
 	try {
 		const resultado = await db.local.rel.find("perfil");
+		let perfiles = [];
 		for (var i = 0; i < resultado.perfiles.length; i++) {
-			if (resultado.perfiles[i].foto) {
-				resultado.perfiles[i].img = URL.createObjectURL(
-					await db.local.rel.getAttachment(
-						"perfil",
-						resultado.perfiles[i].id,
-						"file"
-					)
-				);
+			let perfil = new Perfil(
+				resultado.perfiles[i].genero,
+				resultado.perfiles[i].nombre,
+				resultado.perfiles[i].apellido,
+				resultado.perfiles[i].fecha,
+				resultado.perfiles[i].fotoPerfil,
+				resultado.perfiles[i].fotos,
+				resultado.perfiles[i].nivel,
+				resultado.perfiles[i].exp,
+				resultado.perfiles[i].tiempo,
+				resultado.perfiles[i].logros,
+				resultado.perfiles[i].estadisticas,
+				resultado.perfiles[i].attachments,
+				resultado.perfiles[i].id,
+				resultado.perfiles[i].rev
+			);
+			if (perfil.fotoPerfil.nombre) {
+				await perfil.actualizarRutaFoto(perfil.fotoPerfil.nombre);
 			}
+			perfiles.push(perfil);
 		}
 		if (!!resultado) {
-			commit("cargarPerfiles", resultado.perfiles);
+			commit("cargarPerfiles", perfiles);
 		}
 	} catch (error) {
 		alert("error al cargar los perfiles 101: " + error);
