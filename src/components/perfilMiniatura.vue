@@ -1,54 +1,54 @@
 <template>
-	<q-knob
+	<q-circular-progress
 		show-value
-		class="text-white q-ma-md"
-		v-model="barraExp"
-		size="60px"
-		:thickness="0.2"
-		color="yellow-10"
-		readonly
+		class="q-ma-md"
+		:value="_barraExp"
+		size="80px"
+		:thickness="0.25"
 		track-color="transparent"
+		font-size="10px"
+		color="orange"
 	>
-		<q-avatar size="xl" v-if="perfil.foto">
-			<img :src="perfil.img" />
-			<q-badge floating color="green">{{ perfil.nivel }}</q-badge>
+		<q-avatar size="60px" v-if="!!perfil.fotoPerfil">
+			<img :src="perfil.fotoPerfil.foto" />
+			<q-badge floating color="green">{{ _nivel }}</q-badge>
 		</q-avatar>
 		<q-avatar
 			v-else
-			size="xl"
+			size="60px"
 			color="primary"
 			text-color="white"
 			icon="perm_identity"
 		>
-			<q-badge floating color="green">{{ perfil.nivel }}</q-badge>
+			<q-badge floating color="green">{{ _nivel }}</q-badge>
 		</q-avatar>
-	</q-knob>
+	</q-circular-progress>
 </template>
 
 <script>
-	import { mapGetters, mapMutations, mapState } from "vuex";
+	import { mapGetters, mapState } from "vuex";
 	export default {
 		name: "perfilMiniatura",
-		watch: {},
+		props: {
+			play: {
+				type: Boolean, // String, Number, Boolean, Function, Object, Array
+				default: false,
+			},
+		},
 		data() {
 			return { value: 30 };
 		},
 		computed: {
 			...mapState("perfiles", ["perfil"]),
-			...mapGetters("perfiles", [
-				"nivel",
-				"calculoExpMax",
-				"calculoBarraExp",
-			]),
-			barraExp: {
-				get() {
-					return this.calculoBarraExp;
-				},
-				set(value) {},
+			...mapState("puntaje", ["nivel", "exp"]),
+			...mapGetters("perfiles", ["calculoExpMax", "calculoBarraExp"]),
+			...mapGetters("puntaje", ["expMax", "barraExp"]),
+			_nivel() {
+				return this.play ? this.nivel : this.perfil.nivel;
 			},
-		},
-		methods: {
-			...mapMutations("perfiles", ["updateNivel", "updateExp"]),
+			_barraExp() {
+				return this.play ? this.barraExp : this.calculoBarraExp;
+			},
 		},
 	};
 </script>
