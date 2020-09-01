@@ -13,13 +13,11 @@
 </template>
 
 <script>
-  import PerfilesHeader from "components/PerfilesHeader.vue";
-  import PerfilesFooter from "components/PerfilesFooter.vue";
   export default {
     name: "PerfilesLayout",
     components: {
-      PerfilesHeader,
-      PerfilesFooter,
+      PerfilesHeader: () => import("components/PerfilesHeader.vue"),
+      PerfilesFooter: () => import("components/PerfilesFooter.vue"),
     },
     data() {
       return {

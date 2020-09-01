@@ -102,12 +102,11 @@
 </template>
 
 <script>
-	import ListaDificultad from "components/ListaDificultad.vue";
 	import { mapState } from "vuex";
 	export default {
 		name: "Basico",
 		components: {
-			ListaDificultad,
+			ListaDificultad: () => import("components/ListaDificultad.vue"),
 		},
 		data() {
 			return {

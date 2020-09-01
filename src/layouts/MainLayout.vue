@@ -8,11 +8,10 @@
 </template>
 
 <script>
-  import SupHeader from "components/SupHeader.vue";
   export default {
     name: "MainLayout",
     components: {
-      SupHeader,
+      SupHeader: () => import("components/SupHeader.vue"),
     },
     data() {
       return {};

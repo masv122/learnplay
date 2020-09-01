@@ -3,11 +3,10 @@
 </template>
 
 <script>
-	import ListaDificultad from "components/ListaDificultad.vue";
 	export default {
 		name: "Avanzado",
 		components: {
-			ListaDificultad,
+			ListaDificultad: () => import("components/ListaDificultad.vue"),
 		},
 		data() {
 			return {};

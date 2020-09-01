@@ -7,7 +7,7 @@
 	export default {
 		name: "Intermedio",
 		components: {
-			ListaDificultad,
+			ListaDificultad: () => import("components/ListaDificultad.vue"),
 		},
 		data() {
 			return {};

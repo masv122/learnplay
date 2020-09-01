@@ -14,15 +14,12 @@
 
 <script>
 	import { mapState } from "vuex";
-	import Basico from "components/Basico.vue";
-	import Intermedio from "components/Intermedio.vue";
-	import Avanzado from "components/Avanzado.vue";
 	export default {
 		name: "Panels",
 		components: {
-			Basico,
-			Intermedio,
-			Avanzado,
+			Basico: () => import("components/Basico.vue"),
+			Intermedio: () => import("components/Intermedio.vue"),
+			Avanzado: () => import("components/Avanzado.vue"),
 		},
 		data() {
 			return {};

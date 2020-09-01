@@ -20,11 +20,10 @@
 </template>
 
 <script>
-  import PerfilesFooter from "components/PerfilesFooter.vue";
   export default {
     name: "CrearPerfilLayout",
     components: {
-      PerfilesFooter,
+      PerfilesFooter: () => import("components/PerfilesFooter.vue"),
     },
     data() {
       return {
