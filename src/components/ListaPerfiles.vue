@@ -1,17 +1,17 @@
 <template>
 	<q-list>
 		<q-item
-			v-for="perfil in perfiles"
+			v-for="(perfil, index) in perfiles"
 			:key="perfil.id"
 			class="q-my-sm"
 			clickable
 			v-ripple
-			@click="setLocalData(perfil)"
+			@click="setLocalData(index)"
 			:to="{ name: 'Inicio' }"
 		>
 			<q-item-section avatar>
-				<q-avatar v-if="perfil.foto">
-					<img :src="perfil.img" />
+				<q-avatar v-if="!!perfil.fotoPerfil">
+					<img :src="perfil.fotoPerfil.foto" />
 				</q-avatar>
 				<q-avatar
 					v-else
@@ -69,9 +69,10 @@
 		},
 		methods: {
 			...mapMutations("perfiles", ["updatePerfil"]),
-			setLocalData(perfil) {
+			async setLocalData(index) {
 				try {
-					this.$q.localStorage.set("perfil", perfil);
+					let perfil = this.perfiles[index];
+					await this.$q.localStorage.set("perfil", perfil);
 					this.updatePerfil(perfil);
 					this.$router.push({ name: "Inicio" });
 				} catch (e) {
