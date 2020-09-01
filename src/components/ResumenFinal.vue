@@ -41,7 +41,7 @@
 					label="Aceptar"
 					color="primary"
 					v-close-popup
-					:to="{ name: 'Inicio' }"
+					@click="guardarProgreso"
 				/>
 			</q-card-actions>
 		</q-card>
@@ -75,26 +75,26 @@
 						color: "negative",
 						funcion: () => this.incorrectas,
 					},
-					{
-						titulo: "Pasadas",
-						icon: "block",
-						color: "grey",
-						funcion: () => this.pasadas,
-					},
 				],
 				i: 0,
 			};
 		},
 		watch: {
 			i(value) {
-				if (value === 3) {
+				if (value === 2) {
 					clearInterval(this.insercion);
 				}
 			},
 		},
 		computed: {
 			...mapState("play", ["resumenFinal"]),
-			...mapState("puntaje", ["correctas", "incorrectas", "pasadas"]),
+			...mapState("perfiles", ["perfil"]),
+			...mapState("puntaje", [
+				"correctas",
+				"incorrectas",
+				"nivel",
+				"exp",
+			]),
 			...mapGetters("cronometro", ["cronometro"]),
 			_resumenFinal: {
 				get() {
@@ -113,6 +113,21 @@
 					this.items.push(this.objetos[this.i]);
 					this.i++;
 				}, 1000);
+			},
+			async guardarProgreso() {
+				this.perfil.setNivel(this.nivel);
+				this.perfil.setExp(this.exp);
+				this.perfil.setCorrectas(
+					0,
+					this.perfil.estadisticas.basico.correctas + this.correctas
+				);
+				this.perfil.setIncorrectas(
+					0,
+					this.perfil.estadisticas.basico.incorrectas +
+						this.incorrectas
+				);
+				if (await this.perfil.guardarPerfil())
+					this.$router.push({ name: "Inicio" });
 			},
 		},
 	};
