@@ -4,8 +4,11 @@ export function updateCorrectas(state, value) {
 export function updateIncorrectas(state, value) {
 	state.incorrectas = value;
 }
-export function updatePasadas(state, value) {
-	state.pasadas = value;
+export function updateExp(state, value) {
+	state.exp = value;
+}
+export function updateNivel(state, value) {
+	state.nivel = value;
 }
 export function increaseCorrectas(state) {
 	state.correctas++;
@@ -13,6 +16,9 @@ export function increaseCorrectas(state) {
 export function increaseIncorrectas(state) {
 	state.incorrectas++;
 }
-export function increasePasadas(state) {
-	state.pasadas++;
+export function increaseNivel(state) {
+	state.nivel++;
+}
+export function increaseExp(state, value) {
+	state.exp += value;
 }
