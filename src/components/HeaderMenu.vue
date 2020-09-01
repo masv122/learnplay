@@ -25,7 +25,7 @@
 				</q-item-section>
 				<q-item-section>Logros</q-item-section>
 			</q-item>
-			<q-item clickable v-ripple>
+			<q-item :to="{ name: 'Configuracion' }" clickable v-ripple>
 				<q-item-section avatar>
 					<q-icon color="indigo-9" name="settings" />
 				</q-item-section>

@@ -5,9 +5,10 @@
 </template>
 <script>
 	import perfilEngine from "src/mixins/perfilEngine";
+	import configuracion from "src/mixins/configuracion";
 	export default {
 		name: "App",
-		mixins: [perfilEngine],
+		mixins: [perfilEngine, configuracion],
 	};
 </script>
 
