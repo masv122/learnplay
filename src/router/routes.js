@@ -36,6 +36,29 @@ const routes = [
     ],
   },
   {
+    path: "/perfil",
+    component: () => import("layouts/Perfil.vue"),
+    children: [
+      {
+        path: "",
+        name: "Perfil",
+        component: () => import("pages/Perfil.vue"),
+      },
+    ],
+  },
+  {
+    path: "/fotos",
+    component: () => import("layouts/Fotos.vue"),
+    children: [
+      {
+        path: "",
+        name: "Fotos",
+        component: () => import("pages/Fotos.vue"),
+      },
+    ],
+  },
+
+  {
     path: "*",
     component: () => import("pages/Error404.vue"),
   },
