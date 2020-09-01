@@ -1,95 +1,73 @@
 <template>
 	<q-footer>
-		<div class="row no-wrap hide">
-			<q-toolbar class="col-6">
-				<q-chip>
-					<q-avatar
-						icon="check"
-						color="positive"
-						text-color="white"
-					/>
-					{{ correctas }}
-				</q-chip>
-				<q-chip>
-					<q-avatar
-						icon="cancel"
-						color="negative"
-						text-color="white"
-					/>
-					{{ incorrectas }}
-				</q-chip>
-				<q-chip>
-					<q-avatar
-						icon="not_interested"
-						color="grey"
-						text-color="white"
-					/>
-					{{ pasadas }}
-				</q-chip>
-			</q-toolbar>
-			<q-toolbar class="col-3 text-center">
-				<q-toolbar-title>{{ cronometro }}</q-toolbar-title>
-			</q-toolbar>
-			<q-toolbar class="col-3 text-center">
-				<q-btn-dropdown
-					color="orange"
-					push
-					glossy
-					dense
-					no-caps
-					icon="stars"
-					dropdown-icon="change_history"
-				>
-					<q-list>
-						<q-item clickable v-close-popup>
-							<q-item-section avatar>
-								<q-avatar
-									icon="folder"
-									color="primary"
-									text-color="white"
-								/>
-							</q-item-section>
-							<q-item-section>
-								<q-item-label>Photos</q-item-label>
-								<q-item-label caption
-									>February 22, 2016</q-item-label
-								>
-							</q-item-section>
-							<q-item-section side>
-								<q-icon name="info" color="amber" />
-							</q-item-section>
-						</q-item>
+		<q-toolbar class="row items-center no-wrap">
+			<div>
+				<div class="text-weight-bolder">{{ cronometro }}</div>
+			</div>
 
-						<q-item clickable v-close-popup>
-							<q-item-section avatar>
-								<q-avatar
-									icon="assignment"
-									color="secondary"
-									text-color="white"
-								/>
-							</q-item-section>
-							<q-item-section>
-								<q-item-label>Vacation</q-item-label>
-								<q-item-label caption
-									>February 22, 2016</q-item-label
-								>
-							</q-item-section>
-							<q-item-section side>
-								<q-icon name="info" color="amber" />
-							</q-item-section>
-						</q-item>
-					</q-list>
-				</q-btn-dropdown>
-			</q-toolbar>
-		</div>
+			<q-space />
+			<q-btn-dropdown
+				color="orange"
+				dense
+				rounded
+				no-caps
+				icon="stars"
+				dropdown-icon="change_history"
+			>
+				<q-list>
+					<q-item clickable v-close-popup>
+						<q-item-section avatar>
+							<q-avatar
+								icon="folder"
+								color="primary"
+								text-color="white"
+							/>
+						</q-item-section>
+						<q-item-section>
+							<q-item-label>Photos</q-item-label>
+							<q-item-label caption
+								>February 22, 2016</q-item-label
+							>
+						</q-item-section>
+						<q-item-section side>
+							<q-icon name="info" color="amber" />
+						</q-item-section>
+					</q-item>
+
+					<q-item clickable v-close-popup>
+						<q-item-section avatar>
+							<q-avatar
+								icon="assignment"
+								color="secondary"
+								text-color="white"
+							/>
+						</q-item-section>
+						<q-item-section>
+							<q-item-label>Vacation</q-item-label>
+							<q-item-label caption
+								>February 22, 2016</q-item-label
+							>
+						</q-item-section>
+						<q-item-section side>
+							<q-icon name="info" color="amber" />
+						</q-item-section>
+					</q-item>
+				</q-list>
+			</q-btn-dropdown>
+			<q-btn dense color="positive" round icon="check" class="q-ml-md">
+				<q-badge color="primary" floating>{{ correctas }}</q-badge>
+			</q-btn>
+			<q-btn dense color="negative" round icon="cancel" class="q-ml-md">
+				<q-badge color="primary" floating>{{ incorrectas }}</q-badge>
+			</q-btn>
+		</q-toolbar>
 	</q-footer>
 </template>
 
 <script>
-	import { mapState, mapGetters, mapMutations } from "vuex";
+	import { mapState, mapGetters } from "vuex";
 	export default {
 		name: "SupHeader",
-		components: {},
 		data() {
 			return {
 				segundos: 57,
@@ -97,7 +75,7 @@
 			};
 		},
 		computed: {
-			...mapState("puntaje", ["correctas", "incorrectas", "pasadas"]),
+			...mapState("puntaje", ["correctas", "incorrectas"]),
 			...mapGetters("cronometro", ["cronometro"]),
 		},
 		methods: {},
