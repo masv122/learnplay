@@ -19,10 +19,10 @@ export default {
       "opciones",
       "correctas",
       "incorrectas",
-      "pasadas",
       "resumenFinal",
     ]),
-    ...mapState("puntaje", ["correctas", "falsas", "pasadas"]),
+    ...mapState("perfiles", ["perfil"]),
+    ...mapState("puntaje", ["correctas", "falsas", "nivel", "exp"]),
     ...mapState("cronometro", ["segundos", "minutos", "timer"]),
     ...mapGetters("play", [
       "buscarPruebaBandera",
@@ -56,10 +56,8 @@ export default {
       "insertarMultiplesGeneradas",
       "updateCorrectas",
       "updateIncorrectas",
-      "updatePasadas",
       "increaseCorrectas",
       "increaseIncorrectas",
-      "increasePasadas",
       "updateResumenFinal",
     ]),
     ...mapMutations("cronometro", [
@@ -73,16 +71,12 @@ export default {
     ...mapMutations("puntaje", [
       "updateCorrectas",
       "updateIncorrectas",
-      "updatePasadas",
       "increaseCorrectas",
       "increaseIncorrectas",
-      "increasePasadas",
-    ]),
-    ...mapMutations("perfiles", [
+      "updateExp",
+      "updateNivel",
+      "increaseNivel",
       "increaseExp",
-      "increaseCorrectasPerfil",
-      "increaseIncorrectasPerfil",
-      "increasePasadasPerfil",
     ]),
     ramdon(min, max) {
       return Math.floor(Math.random() * (max - min) + min);
@@ -156,22 +150,36 @@ export default {
     },
     correcta() {
       this.increaseCorrectas();
-      this.increaseCorrectasPerfil(0);
-      this.increaseExp(50);
+      this.increaseExp(10);
+    },
+    upexp() {
+      this.increaseExp(10);
     },
     incorrecta() {
       this.increaseIncorrectas();
-      this.increaseIncorrectasPerfil(0);
     },
     pasar() {
-      this.increasePasadas();
-      this.increasePasadasPerfil(0);
       this.generarPrueba();
     },
-    upExp() {
-      this.increaseExp(10);
+    endResumen() {
+      this.updateBanderasGeneradas([]);
+      this.updateMultiplesGeneradas([]);
+      this.updateTipoPrueba(null);
+      this.updatePruebaGenerada(null);
+      this.updateOpciones(null);
+      this.clearTimer();
+      this.updateResumenFinal(true);
     },
-    reset() {
+    play() {
+      this.updateExp(this.perfil.exp);
+      this.updateNivel(this.perfil.nivel);
+      this.generarPrueba();
+      this.iniciarCronometro();
+      this.updateResumenFinal(false);
+    },
+    endPlay() {
+      this.updateExp(0);
+      this.updateNivel(0);
       this.updateBanderasGeneradas([]);
       this.updateMultiplesGeneradas([]);
       this.updateTipoPrueba(null);
@@ -179,9 +187,8 @@ export default {
       this.updateOpciones(null);
       this.updateCorrectas(0);
       this.updateIncorrectas(0);
-      this.updatePasadas(0);
       this.clearTimer();
-      this.updateResumenFinal();
+      this.reiniciarCronometro();
     },
     iniciarCronometro() {
       if (this.segundos === 0)
