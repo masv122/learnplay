@@ -8,5 +8,6 @@ export default function() {
 		pruebaGenerada: null,
 		opciones: null,
 		resumenFinal: false,
+		respuestaBandera: "",
 	};
 }
