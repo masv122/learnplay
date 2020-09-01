@@ -1,7 +1,7 @@
 <template>
 	<q-menu transition-show="jump-down" transition-hide="jump-up">
 		<q-list style="min-width: 100px">
-			<q-item :to="{ name: 'Perfiles' }" clickable v-ripple>
+			<q-item :to="{ name: 'Perfil' }" clickable v-ripple>
 				<q-item-section avatar>
 					<q-icon color="indigo-9" name="account_circle" />
 				</q-item-section>
